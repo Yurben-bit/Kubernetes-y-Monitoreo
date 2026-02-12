@@ -1,0 +1,10 @@
+# Usamos la imagen oficial de Nginx
+FROM nginx:alpine
+
+# Copiamos nuestro index.html al directorio que Nginx sirve por defecto
+COPY index.html /usr/share/nginx/html/index.html
+
+# Exponemos el puerto 80
+EXPOSE 80
+
+# El contenedor arrancará Nginx automáticamente

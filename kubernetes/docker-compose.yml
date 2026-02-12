@@ -1,0 +1,16 @@
+#sirve para poner los servicios en marcha
+#los contenedores
+services:
+  #app es el nombre del servicio
+  mi-app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    ports: -"3000:80"
+
+  #server es el nombre del servicio
+  mi-server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports: -"3001:80"
